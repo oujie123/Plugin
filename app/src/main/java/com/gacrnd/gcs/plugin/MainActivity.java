@@ -3,6 +3,8 @@ package com.gacrnd.gcs.plugin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
                 printClassLoader();
             }
         });
+        // 启动其他包的activity
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("com.gac.cloud.app","com.gac.cloud.app.app.MainActivity"));
+        startActivity(intent);
     }
 
     private void printClassLoader() {
