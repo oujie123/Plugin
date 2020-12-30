@@ -40,3 +40,9 @@ bootClassLoader是pathClassLoader的parent，bootClassLoader是没有parent的
 双亲委派机制：是为了防止原生类被替换
 
 双亲委托机制：首先检测这个类是否已经被加载了，如果已经加载了，直接获取并返回。如果没有被加载，parent 不为 null，则调用parent的loadClass进行加载，依次递归，如果找到了或者加载了就返回，如果即没找到也加载不了，才自己去加载。这个过程就是我们常说的 双亲委托机制
+
+
+
+aapt打包流程：
+
+![aapt打包流程](G:\android_project\Plugin\doc\aapt打包流程.png)
